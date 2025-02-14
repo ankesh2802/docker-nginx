@@ -12,8 +12,8 @@ jobs:
         uses: actions/checkout@v2
       - name: Build the Docker image
         env:
-          USER: ${{ secrets.DOCKER_USER }}
-          PASS: ${{ secrets.DOCKER_PASS }}
+          USER: ${{ secrets.USER }}
+          PASS: ${{ secrets.PASS }}
         run: |
           docker build -t ankesh28/ankesh-ci-2025:v1 .
       - name: Docker login
